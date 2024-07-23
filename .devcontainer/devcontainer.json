@@ -226,7 +226,7 @@
       "type": "bind"
     }
   ],
-  "postCreateCommand": "/opt/cs50/bin/postCreateCommand",
+  "postCreateCommand": "/opt/cs50/bin/postCreateCommand && sudo apt-get update && sudo apt-get install -y python3.6 && sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1",
   "postStartCommand": "/opt/cs50/bin/postStartCommand",
   "remoteEnv": {
     "CS50_GH_USER": "${localEnv:GITHUB_USER}",
