@@ -1,10 +1,26 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
+  "name": "Python 3",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/python:0-3.11-bullseye",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/coverage-py:2": {}
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "pip3 install --user -r requirements.txt",
+
+  // Configure tool-specific properties.
   "customizations": {
+    // Configure properties specific to VS Code.
     "vscode": {
       "extensions": [
         "/opt/cs50/extensions/explain50-1.0.0.vsix",
         "/opt/cs50/extensions/cs50-0.0.1.vsix",
-        "/opt/cs50/extensions/ddb50-2.0.0.vsix",
         "/opt/cs50/extensions/phpliteadmin-0.0.1.vsix",
         "/opt/cs50/extensions/style50-0.0.1.vsix",
         "cs50.extension-uninstaller",
@@ -210,28 +226,7 @@
       }
     }
   },
-  "forwardPorts": [
-    5000,
-    5900,
-    6081,
-    8080,
-    8082,
-    8787
-  ],
-  "image": "ghcr.io/cs50/codespace:97f41a0eac449e38da4a715af66eb56367e52e87",
-  "mounts": [
-    {
-      "source": "/var/run/docker.sock",
-      "target": "/var/run/docker-host.sock",
-      "type": "bind"
-    }
-  ],
-  "postCreateCommand": "/opt/cs50/bin/postCreateCommand && sudo apt-get update && sudo apt-get install -y python3.6 && sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1",
-  "postStartCommand": "/opt/cs50/bin/postStartCommand",
-  "remoteEnv": {
-    "CS50_GH_USER": "${localEnv:GITHUB_USER}",
-    "LANG": "${localEnv:CS50_LANG}",
-    "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}",
-    "TZ": "${localEnv:CS50_TZ}"
-  }
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
 }
