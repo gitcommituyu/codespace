@@ -12,7 +12,7 @@
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "pip install -r requirements.txt",
+  "postCreateCommand": "pip install --user -r tensorflow==2.12.1 pillow numpy check50",
 
   // Configure tool-specific properties.
   "customizations": {
