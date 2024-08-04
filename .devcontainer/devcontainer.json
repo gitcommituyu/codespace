@@ -12,7 +12,8 @@
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "pip install --user -r tensorflow==2.12.1 pillow numpy check50",
+  "remoteUser": "vscode",
+  "postCreateCommand": "pip install --user -r requirements.txt",
 
   // Configure tool-specific properties.
   "customizations": {
