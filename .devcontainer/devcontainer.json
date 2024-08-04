@@ -12,6 +12,7 @@
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
+  "waitFor": "OnCreateCommand",
   "postCreateCommand": "python3 -m pip install -r requirements.txt",
   "remoteUser": "vscode",
 
