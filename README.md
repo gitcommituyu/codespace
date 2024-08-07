@@ -1,3 +1,2 @@
-# Hola bienvenido a Git Commit 2024 
-
-Recuerda que toda la información de los retos la puedes encontrar en https://gitcommituyu.github.io/
+# Welcome to Git Commit 2024! 🎉
+Recuerda que toda la información del programa puedes encontrarla en [nuestra página web](https://gitcommituyu.github.io/) ;)
